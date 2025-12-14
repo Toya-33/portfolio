@@ -8,41 +8,59 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-	<!--font-family-->
-	<link
-		href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext"
-		rel="stylesheet">
-
-	<!-- title of site -->
-	<title>Oudong</title>
-
-	<!-- For favicon png -->
-	<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png" />
+	<!--Tailwind CSS-->
+	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		tailwind.config = {
+			theme: {
+				extend: {
+					colors: {
+						primary: '#2563eb',
+						secondary: '#1e293b',
+						dark: '#0f172a',
+						light: '#f8fafc',
+						gray: {
+							50: '#f9fafb',
+							100: '#f3f4f6',
+							200: '#e5e7eb',
+							300: '#d1d5db',
+							400: '#9ca3af',
+							500: '#6b7280',
+							600: '#4b5563',
+							700: '#374151',
+							800: '#1f2937',
+							900: '#111827',
+						}
+					},
+					fontFamily: {
+						sans: ['Inter', 'sans-serif'],
+					},
+					animation: {
+						'marquee': 'marquee 120s linear infinite',
+					},
+					keyframes: {
+						marquee: {
+							'0%': { transform: 'translateX(-50%)' },
+							'100%': { transform: 'translateX(0%)' },
+						}
+					}
+				}
+			}
+		}
+	</script>
 
 	<!--font-awesome.min.css-->
-	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
-	<!--flat icon css-->
-	<link rel="stylesheet" href="assets/css/flaticon.css">
-
-	<!--animate.css-->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	
+	<!--animate.css (keeping for potential utility)-->
 	<link rel="stylesheet" href="assets/css/animate.css">
 
-	<!--owl.carousel.css-->
+	<!--owl.carousel.css (keeping for now, may replace)-->
 	<link rel="stylesheet" href="assets/css/owl.carousel.min.css">
 	<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-
-	<!--bootstrap.min.css-->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-	<!-- bootsnav -->
-	<link rel="stylesheet" href="assets/css/bootsnav.css">
-
-	<!--style.css-->
-	<link rel="stylesheet" href="assets/css/style.css">
-
-	<!--responsive.css-->
-	<link rel="stylesheet" href="assets/css/responsive.css">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,550 +77,726 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-	<!-- top-area Start -->
-	<header class="top-area">
-		<div class="header-area">
-			<!-- Start Navigation -->
-			<nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
-
-				<div class="container">
-
-					<!-- Start Header Navigation -->
-					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-							<i class="fa fa-bars"></i>
-						</button>
-						<a class="navbar-brand" href="index.html">Heng KongkeaOudong</a>
-					</div><!--/.navbar-header-->
-					<!-- End Header Navigation -->
-
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-						<ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-							<li class=" smooth-menu active"></li>
-							<li class=" smooth-menu"><a href="#experience">experience</a></li>
-							<li class="smooth-menu"><a href="#skills">skills</a></li>
-							<li class="smooth-menu"><a href="#education">education</a></li>
-							<li class="smooth-menu"><a href="#portfolio">portfolio</a></li>
-							<li class="smooth-menu"><a href="#contact">contact</a></li>
-						</ul><!--/.nav -->
-					</div><!-- /.navbar-collapse -->
-				</div><!--/.container-->
-			</nav><!--/nav-->
-			<!-- End Navigation -->
-		</div><!--/.header-area-->
-
-		<div class="clearfix"></div>
-
-	</header><!-- /.top-area-->
-	<!-- top-area End -->
-
-	<!--welcome-hero start -->
-	<section id="welcome-hero" class="welcome-hero">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="header-text">
-						<h2>hi <span>,</span> i am <br> Heng <br> Kongkea<br>Oudong <span>.</span> </h2>
-						<p>Data Analyst</p>
-						<a href="assets/download/CV2.pdf" download>download resume</a>
-					</div><!--/.header-text-->
-				</div><!--/.col-->
-			</div><!-- /.row-->
-		</div><!-- /.container-->
-
-	</section><!--/.welcome-hero-->
-	<!--welcome-hero end -->
-
-	<!--about start -->
-	<section id="about" class="about">
-		<div class="section-heading text-center">
-			<h2>about me</h2>
-		</div>
-		<div class="container">
-			<div class="about-content">
-				<div class="row">
-					<div class="col-sm-6">
-						<div class="single-about-txt">
-							<h3>
-								I'm currently a Senior at National University of Management majoring in Digital Economy,
-								Phnom Penh, Cambodia.
-							</h3>
-							<p>
-								As a college student from Cambodia with big dreams in data analysis, I see this path as
-								a powerful way to help
-								the world. I'm learning skills like Python, SQL, R, Excel and more in order to collect,
-								process and analyze data because
-								I think that understanding data can make big changes in almost any areas in our life.
-								It's not easy,
-								but I'm doing projects, joining workshops, and always learning new things to get better.
-								I hope to use
-								these skills to make a positive impact, especially in places that need it most.
-							</p>
-							<div class="row">
-								<div class="col-sm-4">
-									<div class="single-about-add-info">
-										<h3>phone</h3>
-										<p>+855-95633963 or</p>
-										<p>+855-85304019</p>
-									</div>
-								</div>
-								<div class="col-sm-8">
-									<div class="single-about-add-info">
-										<h3>email</h3>
-										<p>hengkongkeaoudong@gmail.com</p>
-									</div>
-								</div>
-							</div>
+	<!-- Header/Navbar -->
+	<header class="fixed top-0 z-50 w-full transition-all duration-300" id="navbar">
+		<nav class="bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+				<div class="flex items-center justify-between h-20">
+					<!-- Logo -->
+					<div class="flex-shrink-0">
+						<a href="#" class="text-2xl font-bold text-primary tracking-tight">
+							Welcome<span class="text-dark"> To My Portfolio</span>
+						</a>
+					</div>
+					
+					<!-- Desktop Menu -->
+					<div class="hidden md:block">
+						<div class="ml-10 flex items-baseline space-x-8">
+							<a href="#welcome-hero" class="nav-link text-primary font-medium hover:text-primary transition-colors">Home</a>
+							<a href="#about" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">About</a>
+							<a href="#experience" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">Experience</a>
+							<a href="#skills" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">Skills</a>
+							<a href="#education" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">Education</a>
+							<a href="#certificates" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">Certificates</a>
+							<a href="#portfolio" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">Portfolio</a>
+							<a href="#contact" class="nav-link text-gray-600 hover:text-primary font-medium transition-colors">Contact</a>
 						</div>
 					</div>
-					<div class="col-sm-offset-1 col-sm-5">
-						<div class="single-about-img">
-							<img src="assets/images/about/my_profile.jpg" alt="profile_image">
-							<div class="about-list-icon">
-								<ul>
-									<li>
-										<a href="https://www.linkedin.com/in/kongkea-oudong-heng-572790267/">
-											<i class="fa fa-linkedin" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-									<li>
-										<a href="https://web.facebook.com/viseth.iu.3">
-											<i class="fa fa-facebook" aria-hidden="true"></i>
-										</a>
-									</li><!-- / li -->
-									<li>
-										<a href="https://twitter.com/T0YA_33">
-											<i class="fa fa-twitter" aria-hidden="true"></i>
-										</a>
 
-									</li><!-- / li -->
-								</ul><!-- / ul -->
-							</div><!-- /.about-list-icon -->
+					<!-- Mobile Menu Button -->
+					<div class="md:hidden">
+						<button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none p-2">
+							<i class="fas fa-bars text-2xl"></i>
+						</button>
+					</div>
+				</div>
+			</div>
 
+			<!-- Mobile Menu Panel -->
+			<div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
+				<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+					<a href="#welcome-hero" class="mobile-nav-link block px-3 py-2 text-base font-medium text-primary w-full text-center hover:bg-gray-50">Home</a>
+					<a href="#about" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">About</a>
+					<a href="#experience" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">Experience</a>
+					<a href="#skills" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">Skills</a>
+					<a href="#education" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">Education</a>
+					<a href="#certificates" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">Certificates</a>
+					<a href="#portfolio" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">Portfolio</a>
+					<a href="#contact" class="mobile-nav-link block px-3 py-2 text-base font-medium text-gray-600 hover:text-primary w-full text-center hover:bg-gray-50">Contact</a>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!--Hero Section-->
+	<section id="welcome-hero" class="relative h-[750px] md:h-[1000px] flex items-center justify-center bg-gray-900 overflow-hidden">
+		<!-- Background Showcase -->
+		<div class="absolute inset-0 z-0">
+			<!-- Overlay for text readability -->
+			<div class="absolute inset-0 bg-white/70 z-10"></div>
+			
+			<!-- Marquee Container -->
+			<div class="flex animate-marquee h-full w-max">
+				<!-- First Set -->
+				<div class="flex h-full">
+					<img src="assets/images/hero/image_1.jpg" class="h-full w-screen object-cover" alt="Hero Background 1">
+					<img src="assets/images/hero/image_2.jpg" class="h-full w-screen object-cover" alt="Hero Background 2">
+					<img src="assets/images/hero/image_3.jpeg" class="h-full w-screen object-cover" alt="Hero Background 3">
+					<img src="assets/images/hero/image_4.jpg" class="h-full w-screen object-cover" alt="Hero Background 4">
+					<img src="assets/images/hero/image_5.jpg" class="h-full w-screen object-cover" alt="Hero Background 5">
+				</div>
+				<!-- Duplicate Set -->
+				<div class="flex h-full">
+					<img src="assets/images/hero/image_1.jpg" class="h-full w-screen object-cover" alt="Hero Background 1">
+					<img src="assets/images/hero/image_2.jpg" class="h-full w-screen object-cover" alt="Hero Background 2">
+					<img src="assets/images/hero/image_3.jpeg" class="h-full w-screen object-cover" alt="Hero Background 3">
+					<img src="assets/images/hero/image_4.jpg" class="h-full w-screen object-cover" alt="Hero Background 4">
+					<img src="assets/images/hero/image_5.jpg" class="h-full w-screen object-cover" alt="Hero Background 5">
+				</div>
+			</div>
+		</div>
+
+		<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center">
+			<div class="space-y-6">
+				<h2 class="text-5xl md:text-7xl font-bold text-dark tracking-tight leading-tight">
+					Hi, I am <br>
+					<span class="text-primary">Heng KongkeaOudong</span>.
+				</h2>
+				<p class="text-xl md:text-2xl text-gray-600 font-medium max-w-2xl mx-auto">
+					Junior Economic Researcher & Data Analyst
+				</p>
+				<div class="pt-8">
+					<a href="assets/download/CV.pdf" download class="inline-flex items-center px-8 py-4 bg-primary text-white text-lg font-semibold rounded-full shadow-lg hover:bg-blue-700 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ring-4 ring-blue-100">
+						Download Resume <i class="fas fa-download ml-2"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--About Section-->
+	<section id="about" class="py-24 bg-white">
+		<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-dark">About Me</h2>
+				<div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+			</div>
+
+			<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+				<!-- Image Column -->
+				<div class="md:col-span-5 relative">
+					<div class="relative rounded-2xl overflow-hidden shadow-2xl ring-8 ring-gray-50 group">
+						<img src="assets/images/about/my_profile.jpg" alt="Profile Image" class="w-full h-auto transform transition duration-500 group-hover:scale-105">
+						
+						<!-- Social Links Overlay or Bottom Bar -->
+						<div class="absolute bottom-0 left-0 w-full bg-white/90 backdrop-blur-sm p-4 border-t border-gray-100 flex justify-center space-x-6">
+							<a href="https://www.linkedin.com/in/kongkea-oudong-heng-572790267/" class="text-gray-500 hover:text-primary transition-colors text-xl"><i class="fab fa-linkedin"></i></a>
+							<a href="https://web.facebook.com/viseth.iu.3" class="text-gray-500 hover:text-primary transition-colors text-xl"><i class="fab fa-facebook"></i></a>
+							<a href="https://twitter.com/T0YA_33" class="text-gray-500 hover:text-primary transition-colors text-xl"><i class="fab fa-twitter"></i></a>
+							<a href="https://github.com/Toya-33" class="text-gray-500 hover:text-primary transition-colors text-xl"><i class="fab fa-github"></i></a>
 						</div>
+					</div>
+					<!-- decorative dots -->
+					<div class="absolute -z-10 -bottom-6 -right-6 w-24 h-24 bg-dots-pattern opacity-20"></div>
+				</div>
 
+				<!-- Content Column -->
+				<div class="md:col-span-7 space-y-6">
+					<h3 class="text-2xl font-bold text-dark">
+						I am a Junior Economic Researcher and Data Analyst at CAPRED, Phnom Penh.
+					</h3>
+					<p class="text-gray-600 leading-relaxed text-lg">
+						As a Junior Researcher at CAPRED, I mostly work on Data Engineering, Data Analysis, and CAPRED Dataverse (CAPRED internal data platform). 
+						I hold a Bachelor's in Digital Economy from the National University of Management, Cambodia. I mainly specialized in Python, R programming and SQL with a decent knowledge regarding
+						software development (website and app) and cloud computing.
+					</p>
+
+					<div class="bg-gray-50 rounded-xl p-6 border border-gray-100 mt-8">
+						<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+							<div>
+								<span class="block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Date of Birth</span>
+								<p class="text-dark font-medium">20 August 2002</p>
+							</div>
+							<div>
+								<span class="block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Email</span>
+								<p class="text-dark font-medium">hengkongkeaoudong@gmail.com</p>
+							</div>
+							<div>
+								<span class="block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Phone</span>
+								<p class="text-dark font-medium">+855-95633963 / 085304019</p>
+							</div>
+							<div>
+								<span class="block text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Location</span>
+								<p class="text-dark font-medium">Phnom Penh, Cambodia</p>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section><!--/.about-->
-	<!--about end -->
+	</section>
 	<!--experience start -->
 	<section id="experience" class="experience">
-		<div class="section-heading text-center">
-			<h2>experience</h2>
-		</div>
-		<div class="container">
-			<div class="experience-content">
-				<div class="main-timeline">
-					<ul>
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-5">
-										<div class="experience-time text-right">
-											<h2>August 2021 - Present</h2>
-											<h3>Co-founder and Team leader of T-rental</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5">
-										<div class="timeline">
-											<div class="timeline-content">
-												<h4 class="title">
-													<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-													T-rental
-												</h4>
-												<h5>Phnom Penh, Cambodia</h5>
-												<p class="title">
-													T-rental is a P2P rental marketplace application that use blockchain
-													technology to allows user to rent produts and put their unused
-													belongings
-													for rental in order to earn money. As the Co-founder and Team leader
-													of T-rental
-													I have gained skills in leadership,
-													blockchain technology, problem
-													solving and management skills.
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-
-						<li>
-							<div class="single-timeline-box fix">
-								<div class="row">
-									<div class="col-md-offset-1 col-md-5 experience-time-responsive">
-										<div class="experience-time">
-											<h2>
-												<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-												October 2022 to April 2023 (6 months)
-											</h2>
-											<h3>Chinese Translator/Manager</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-									<div class="col-md-5">
-										<div class="timeline">
-											<div class="timeline-content text-right">
-												<h4 class="title">
-													Anjing Frozen Food Supplier
-												</h4>
-												<h5>Phnom Penh, Cambodia</h5>
-												<p>
-													During my work there, I have gained skills in management, customer
-													interactions,
-													inventory management and business operations.
-												</p>
-											</div><!--/.timeline-content-->
-										</div><!--/.timeline-->
-									</div><!--/.col-->
-									<div class="col-md-offset-1 col-md-5 experience-time-main">
-										<div class="experience-time">
-											<h2>
-												<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-												October 2022 to April 2023 (6 months)
-											</h2>
-											<h3>Chinese Translator/Manager</h3>
-										</div><!--/.experience-time-->
-									</div><!--/.col-->
-								</div>
-							</div><!--/.single-timeline-box-->
-						</li>
-					</ul>
-				</div><!--.main-timeline-->
-			</div><!--.experience-content-->
-		</div>
-
-	</section><!--/.experience-->
-	<!--experience end -->
-
-	<!--skills start -->
-	<section id="skills" class="skills">
-		<div class="skill-content">
-			<div class="section-heading text-center">
-				<h2>Technical skills</h2>
+	<!--Experience Section-->
+	<section id="experience" class="py-24 bg-gray-50">
+		<div class="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-dark">Professional Experience</h2>
+				<div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
 			</div>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="single-skill-content">
-							<div class="barWrapper">
-								<span class="progressText">Python</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="70"
-											aria-valuemin="10" aria-valuemax="100" style="">
-										</div>
-									</div>
-									<h3>70%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">R</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="80"
-											aria-valuemin="10" aria-valuemax="100" style="">
 
-										</div>
-									</div>
-									<h3>80%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Excel</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100" style="">
+			<div class="relative pl-8 sm:pl-0">
+				<!-- Vertical Line -->
+				<div class="hidden sm:block absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-gray-200"></div>
 
-										</div>
-									</div>
-									<h3>90%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Power BI</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100" style="">
-
-										</div>
-									</div>
-									<h3>75%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">SQL</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="90"
-											aria-valuemin="10" aria-valuemax="100" style="">
-
-										</div>
-									</div>
-									<h3>80%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
-							<div class="barWrapper">
-								<span class="progressText">Statistics</span>
-								<div class="single-progress-txt">
-									<div class="progress ">
-										<div class="progress-bar" role="progressbar" aria-valuenow="70"
-											aria-valuemin="10" aria-valuemax="100" style="">
-
-										</div>
-									</div>
-									<h3>70%</h3>
-								</div>
-							</div><!-- /.barWrapper -->
+				<!-- Job 1 -->
+				<div class="relative sm:flex items-center justify-between group mb-12">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">April 2025 - Present</span>
 						</div>
+						<h3 class="text-xl font-bold text-dark">Junior Economic Researcher & Data Analyst</h3>
+						<h4 class="text-lg text-primary font-medium">CAPRED</h4>
 					</div>
+					<div class="z-20 flex items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<i class="fas fa-briefcase text-white text-xs mx-auto"></i>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300 mt-4 sm:mt-0">
+						<ul class="space-y-2 text-gray-600 list-disc list-inside">
+							<li><strong class="text-dark">AI Implementation:</strong> Developed Python tool integrating LLM for policy analysis.</li>
+							<li><strong class="text-dark">Web Scraping:</strong> Scraped 32,000+ articles and business profiles for analysis.</li>
+							<li><strong class="text-dark">Data Engineering:</strong> Built data platform using R for team accessibility.</li>
+							<li><strong class="text-dark">Cloud Computing:</strong> Deployed platform to Azure with CI/CD pipelines.</li>
+						</ul>
+					</div>
+				</div>
 
-	</section><!--/.skills-->
-	<!--skills end -->
-	<section id="education" class="education">
-		<div class="section-heading text-center">
-			<h2>education</h2>
+				<!-- Job 2 -->
+				<div class="relative sm:flex items-center justify-between group mb-12">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right sm:order-2">
+						<!-- Content swapped for right side -->
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">Oct 2024 - April 2025</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">Economic Intern</h3>
+						<h4 class="text-lg text-primary font-medium">CAPRED</h4>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-white border-2 border-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<div class="w-2.5 h-2.5 bg-primary rounded-full mx-auto"></div>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300 mt-4 sm:mt-0 sm:order-1 sm:text-right">
+						<ul class="space-y-2 text-gray-600 list-disc list-inside text-left">
+							<li><strong class="text-dark">Policy Mapping:</strong> Extracted government policy measures.</li>
+							<li><strong class="text-dark">Internal Support:</strong> Translation, training assistance, data collection.</li>
+							<li><strong class="text-dark">Media Report:</strong> Automated media summaries using Python.</li>
+							<li><strong class="text-dark">Data Dictionary:</strong> Created data dictionary for Ministry datasets.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Job 3 -->
+				<div class="relative sm:flex items-center justify-between group mb-12">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">Apr 2024 - Sep 2024</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">iPay Intern</h3>
+						<h4 class="text-lg text-primary font-medium">LOLC Cambodia Plc.</h4>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-white border-2 border-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<div class="w-2.5 h-2.5 bg-primary rounded-full mx-auto"></div>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300 mt-4 sm:mt-0">
+						<ul class="space-y-2 text-gray-600 list-disc list-inside">
+							<li>Built dashboards and templates to track sales performance.</li>
+							<li>Analyzed raw data and proposed strategies.</li>
+							<li>Cooperated in writing reports for executives.</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Job 4 -->
+				<div class="relative sm:flex items-center justify-between group">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right sm:order-2">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">Oct 2022 - Apr 2023</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">Chinese Translator/Manager</h3>
+						<h4 class="text-lg text-primary font-medium">Anjing Frozen Food Supplier</h4>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-white border-2 border-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<div class="w-2.5 h-2.5 bg-primary rounded-full mx-auto"></div>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 bg-white rounded-xl shadow-md border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300 mt-4 sm:mt-0 sm:order-1">
+						<p class="text-gray-600">
+							Gained skills in managing workers, customer interactions, inventory management and business operations.
+						</p>
+					</div>
+				</div>
+
+			</div>
 		</div>
-		<div class="container">
-			<div class="education-horizontal-timeline">
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>2014 - 2017</h2>
-								<h3>Lower Diploma <span> at </span> IEL international School</h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal"></span>
+	</section>
+
+	<!--Skills Section-->
+	<section id="skills" class="py-24 bg-white">
+		<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+				<!-- Technical Skills -->
+				<div>
+					<div class="mb-10">
+						<h3 class="text-2xl font-bold text-dark mb-2">Technical Skills</h3>
+						<div class="w-12 h-1 bg-primary rounded-full"></div>
+					</div>
+					<div class="space-y-6">
+						<!-- Skill Item -->
+						<div>
+							<div class="flex justify-between mb-1">
+								<span class="text-base font-medium text-dark">Python</span>
+								<span class="text-sm font-medium text-gray-500">80%</span>
 							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										IEL international School
-									</h4>
-									<h5>Phnom Penh, Cambodia</h5>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
+							<div class="w-full bg-gray-100 rounded-full h-2.5">
+								<div class="bg-primary h-2.5 rounded-full" style="width: 70%"></div>
+							</div>
+						</div>
+						<!-- Skill Item -->
+						<div>
+							<div class="flex justify-between mb-1">
+								<span class="text-base font-medium text-dark">R</span>
+								<span class="text-sm font-medium text-gray-500">70%</span>
+							</div>
+							<div class="w-full bg-gray-100 rounded-full h-2.5">
+								<div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+							</div>
+						</div>
+						<!-- Skill Item -->
+						<div>
+							<div class="flex justify-between mb-1">
+								<span class="text-base font-medium text-dark">SQL</span>
+								<span class="text-sm font-medium text-gray-500">60%</span>
+							</div>
+							<div class="w-full bg-gray-100 rounded-full h-2.5">
+								<div class="bg-primary h-2.5 rounded-full" style="width: 80%"></div>
+							</div>
+						</div>
+						<!-- Skill Item -->
+						<div>
+							<div class="flex justify-between mb-1">
+								<span class="text-base font-medium text-dark">Web Development (HTML/CSS/JS)</span>
+								<span class="text-sm font-medium text-gray-500">70%</span>
+							</div>
+							<div class="w-full bg-gray-100 rounded-full h-2.5">
+								<div class="bg-primary h-2.5 rounded-full" style="width: 75%"></div>
+							</div>
+						</div>
+						<!-- Skill Item -->
+						<div>
+							<div class="flex justify-between mb-1">
+								<span class="text-base font-medium text-dark">Excel & Power BI</span>
+								<span class="text-sm font-medium text-gray-500">65%</span>
+							</div>
+							<div class="w-full bg-gray-100 rounded-full h-2.5">
+								<div class="bg-primary h-2.5 rounded-full" style="width: 90%"></div>
+							</div>
+						</div>
+						<!-- Skill Item -->
+						<div>
+							<div class="flex justify-between mb-1">
+								<span class="text-base font-medium text-dark">Flutter & Dart</span>
+								<span class="text-sm font-medium text-gray-500">60%</span>
+							</div>
+							<div class="w-full bg-gray-100 rounded-full h-2.5">
+								<div class="bg-primary h-2.5 rounded-full" style="width: 60%"></div>
+							</div>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>2017 - 2020</h2>
-								<h3>Higher Diploma <span> at </span> IEL international School</h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal"></span>
-							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										IEL international School
-									</h4>
-									<h5>Phnom Penh, Cambodia</h5>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
+				</div>
+
+				<!-- Soft Skills & Languages -->
+				<div>
+					<div class="mb-12">
+						<div class="mb-8">
+							<h3 class="text-2xl font-bold text-dark mb-2">Soft Skills</h3>
+							<div class="w-12 h-1 bg-primary rounded-full"></div>
+						</div>
+						<div class="flex flex-wrap gap-3">
+							<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:border-primary hover:text-primary transition-colors cursor-default">Time Management</span>
+							<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:border-primary hover:text-primary transition-colors cursor-default">Communication</span>
+							<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:border-primary hover:text-primary transition-colors cursor-default">Critical Thinking</span>
+							<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:border-primary hover:text-primary transition-colors cursor-default">Empathetic</span>
+							<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:border-primary hover:text-primary transition-colors cursor-default">Curious</span>
+							<span class="px-4 py-2 bg-gray-50 text-gray-700 rounded-lg text-sm font-medium border border-gray-100 hover:border-primary hover:text-primary transition-colors cursor-default">Fast Learner</span>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="single-horizontal-timeline">
-							<div class="experience-time">
-								<h2>2020 - Present</h2>
-								<h3>Digital Economy <span> at </span> NUM University </h3>
-							</div><!--/.experience-time-->
-							<div class="timeline-horizontal-border">
-								<i class="fa fa-circle" aria-hidden="true"></i>
-								<span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
+
+					<div>
+						<div class="mb-8">
+							<h3 class="text-2xl font-bold text-dark mb-2">Languages</h3>
+							<div class="w-12 h-1 bg-primary rounded-full"></div>
+						</div>
+						<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+							<div class="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center hover:shadow-md transition-shadow">
+								<div class="text-primary text-2xl mb-2">🇰🇭</div>
+								<h4 class="font-bold text-dark">Khmer</h4>
+								<p class="text-sm text-gray-500">Native</p>
 							</div>
-							<div class="timeline">
-								<div class="timeline-content">
-									<h4 class="title">
-										National University of Management
-									</h4>
-									<h5>Phnom Penh, Cambodia</h5>
-								</div><!--/.timeline-content-->
-							</div><!--/.timeline-->
+							<div class="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center hover:shadow-md transition-shadow">
+								<div class="text-primary text-2xl mb-2">🇬🇧</div>
+								<h4 class="font-bold text-dark">English</h4>
+								<p class="text-sm text-gray-500">Fluent</p>
+							</div>
+							<div class="p-4 bg-gray-50 rounded-xl border border-gray-100 text-center hover:shadow-md transition-shadow">
+								<div class="text-primary text-2xl mb-2">🇨🇳</div>
+								<h4 class="font-bold text-dark">Chinese</h4>
+								<p class="text-sm text-gray-500">Intermediate</p>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-	</section><!--/.education-->
-	<!--education end -->
-
-	<!--portfolio start -->
-	<section id="portfolio" class="portfolio">
-		<div class="portfolio-details">
-			<div class="section-heading text-center">
-				<h2>portfolio</h2>
+	</section>
+	<!--Education Section-->
+	<section id="education" class="py-24 bg-gray-50">
+		<div class="container max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-dark">Education</h2>
+				<div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
 			</div>
-			<div class="container">
-				<div class="portfolio-content">
-					<div class="isotope">
-						<div class="row">
 
-							<div class="col-sm-6">
-								<div class="item">
-									<img src="assets/images/portfolio/Doctor_1.png" alt="portfolio image" />
-									<div class="isotope-overlay">
-										<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Dr%20Semmelweis%20Analysis/Dr_Semmelweis_Handwashing_Discovery.ipynb"
-											target="_blank">
-											"Analyze how handwashing help prevent maternal deaths"
-										</a>
-									</div><!-- /.isotope-overlay -->
-								</div><!-- /.item -->
-								<div class="item">
-									<img src="assets/images/portfolio/boston_1.jpg" alt="portfolio image" />
-									<div class="isotope-overlay">
-										<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Multivariable%20and%20Linear%20Regression/boston_house_price_prediction.ipynb"
-											target="_blank">
-											"Creating a model to predict house price in boston"
-										</a>
-									</div><!-- /.isotope-overlay -->
-								</div><!-- /.item -->
-							</div><!-- /.col -->
-							<div class="col-sm-6">
-								<div class="item">
-									<img src="assets/images/portfolio/nobel_1.jpg" alt="portfolio image" />
-									<div class="isotope-overlay">
-										<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Nobel%20Prize%20Analysis/Nobel_Prize_Analysis.ipynb"
-											target="_blank">
-											"Explore the history of nobel prize"
-										</a>
-									</div><!-- /.isotope-overlay -->
-								</div><!-- /.item -->
-								<div class="item">
-									<img src="assets/images/portfolio/movie.jpg" alt="portfolio image" />
-									<div class="isotope-overlay">
-										<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Seaborn%20Linear%20Regression/movie_budget_analysis.ipynb"
-											target="_blank">
-											"Discover the relationship between movive budget and revenue"
-										</a>
-									</div><!-- /.isotope-overlay -->
-								</div><!-- /.item -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!--/.isotope-->
-				</div><!--/.gallery-content-->
-			</div><!--/.container-->
-		</div><!--/.portfolio-details-->
+			<div class="relative pl-8 sm:pl-0">
+				<!-- Vertical Line -->
+				<div class="hidden sm:block absolute left-1/2 -translate-x-px top-0 bottom-0 w-0.5 bg-gray-200"></div>
 
-	</section><!--/.portfolio-->
-	<!--portfolio end -->
+				<!-- Edu 1 -->
+				<div class="relative sm:flex items-center justify-between group mb-12">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">2020 - 2024</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">Bachelor of Digital Economy</h3>
+						<h4 class="text-lg text-primary font-medium">National University of Management</h4>
+						<p class="text-gray-500 mt-1">Phnom Penh (Graduated)</p>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<i class="fas fa-graduation-cap text-white text-xs mx-auto"></i>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 sm:opacity-0"></div> <!-- Spacer for alternating layout -->
+				</div>
 
-	<!--contact start -->
-	<section id="contact" class="contact">
-		<div class="section-heading text-center">
-			<h2>contact me</h2>
+				<!-- Edu 2 -->
+				<div class="relative sm:flex items-center justify-between group mb-12">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right sm:order-2">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">Dec 2020</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">High School Diploma</h3>
+						<h4 class="text-lg text-primary font-medium">IEL International School</h4>
+						<p class="text-gray-500 mt-1">Phnom Penh (Completed)</p>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-white border-2 border-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<div class="w-2.5 h-2.5 bg-primary rounded-full mx-auto"></div>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 sm:opacity-0"></div> <!-- Spacer -->
+				</div>
+
+				<!-- Edu 3 -->
+				<div class="relative sm:flex items-center justify-between group mb-12">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">Mar 2019</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">General English Program</h3>
+						<h4 class="text-lg text-primary font-medium">Australia Centre of Education</h4>
+						<p class="text-gray-500 mt-1">Phnom Penh (Completed)</p>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-white border-2 border-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<div class="w-2.5 h-2.5 bg-primary rounded-full mx-auto"></div>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 sm:opacity-0"></div> <!-- Spacer -->
+				</div>
+
+				<!-- Edu 4 -->
+				<div class="relative sm:flex items-center justify-between group">
+					<div class="order-1 w-full sm:w-5/12 text-left sm:text-right sm:order-2">
+						<div class="mb-2">
+							<span class="inline-block px-3 py-1 bg-blue-100 text-primary rounded-full text-sm font-semibold">Ongoing</span>
+						</div>
+						<h3 class="text-xl font-bold text-dark">Intermediate Level</h3>
+						<h4 class="text-lg text-primary font-medium">Duan Hua (端华学校)</h4>
+						<p class="text-gray-500 mt-1">Phnom Penh</p>
+					</div>
+					<div class="z-20 flex items-center order-1 bg-white border-2 border-primary shadow-xl w-8 h-8 rounded-full absolute left-[-45px] sm:left-1/2 sm:-translate-x-1/2 ring-4 ring-white">
+						<div class="w-2.5 h-2.5 bg-primary rounded-full mx-auto"></div>
+					</div>
+					<div class="order-1 w-full sm:w-5/12 sm:opacity-0"></div> <!-- Spacer -->
+				</div>
+
+			</div>
 		</div>
-		<div class="container">
-			<div class="contact-content">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="single-contact-box">
-							<div class="contact-adress">
-								<div class="contact-add-head">
-									<h3>Heng KongkeaOudong</h3>
-									<p>Data Analyst</p>
-								</div>
-								<div class="contact-add-info">
-									<div class="single-contact-add-info">
-										<h3>Phone Number</h3>
-										<p>855-85304019 or 855-95633963</p>
-									</div>
-									<div class="single-contact-add-info">
-										<h3>email</h3>
-										<p>hengkongkeaoudong@gmail.com</p>
-									</div>
-									<div class="single-contact-add-info">
-										<h3>website</h3>
-										<p>https://toya-33.github.io/portfolio</p>
-									</div>
-								</div>
-							</div><!--/.contact-adress-->
-							<div class="hm-foot-icon text-center">
-								<ul>
-									<li><a href="https://web.facebook.com/viseth.iu.3"><i
-												class="fa fa-facebook"></i></a></li><!--/li-->
-									<li><a href="https://twitter.com/T0YA_33"><i class="fa fa-twitter"></i></a></li>
-									<!--/li-->
-									<li><a href="https://www.linkedin.com/in/kongkea-oudong-heng-572790267/"><i
-												class="fa fa-linkedin"></i></a></li><!--/li-->
-								</ul><!--/ul-->
-							</div><!--/.hm-foot-icon-->
-						</div><!--/.single-contact-box-->
-					</div><!--/.col-->
-				</div><!--/.row-->
-			</div><!--/.contact-content-->
-		</div><!--/.container-->
+	</section>
 
-	</section><!--/.contact-->
-	<!--contact end -->
-
-	<!--footer-copyright start-->
-	<footer id="footer-copyright" class="footer-copyright">
-		<div class="container">
-			<div class="hm-footer-copyright text-center">
-				<p>
-					&copy; copyright hengkongkeaoudong.
-				</p><!--/p-->
-			</div><!--/.text-center-->
-		</div><!--/.container-->
-
-		<div id="scroll-Top">
-			<div class="return-to-top">
-				<i class="fa fa-angle-up " id="scroll-top"></i>
+	<!--Certificates & Achievements Section-->
+	<section id="certificates" class="py-24 bg-white">
+		<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-dark">Certificates & Achievements</h2>
+				<div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
 			</div>
 
-		</div><!--/.scroll-Top-->
+			<!-- Certificates -->
+			<div class="mb-16">
+				<h3 class="text-2xl font-bold text-dark mb-8 border-l-4 border-primary pl-4">Certificates</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Cert 1 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fas fa-certificate"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">2025 Advance level UNESCO UNITWIN Data Science Camp</h4>
+						<p class="text-gray-500 text-sm">Cambodia, Feb 2025</p>
+					</div>
+					<!-- Cert 2 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fas fa-code"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">100 Days of Code: Python Pro Bootcamp</h4>
+						<p class="text-gray-500 text-sm">Udemy, Mar 2024</p>
+					</div>
+					<!-- Cert 3 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fas fa-certificate"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">2024 Intermediate level UNESCO UNITWIN Data Science Camp</h4>
+						<p class="text-gray-500 text-sm">Cambodia, Feb 2024</p>
+					</div>
+					<!-- Cert 4 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fas fa-language"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">Chinese Language Primary Level</h4>
+						<p class="text-gray-500 text-sm">Duan Hua (端华学校), Oct 2023</p>
+					</div>
+					<!-- Cert 5 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fab fa-google"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">Google Data Analytics</h4>
+						<p class="text-gray-500 text-sm">Coursera, Sep 2023</p>
+					</div>
+					<!-- Cert 6 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fas fa-certificate"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">2023 Standard level UNESCO UNITWIN Data Science Camp</h4>
+						<p class="text-gray-500 text-sm">Cambodia, Aug 2023</p>
+					</div>
+					<!-- Cert 7 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300">
+						<div class="w-12 h-12 bg-blue-50 text-primary rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
+							<i class="fas fa-globe"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">ACE General English Program</h4>
+						<p class="text-gray-500 text-sm">Cambodia, May 2019</p>
+					</div>
+				</div>
+			</div>
 
-	</footer><!--/.footer-copyright-->
-	<!--footer-copyright end-->
+			<!-- Achievements -->
+			<div>
+				<h3 class="text-2xl font-bold text-dark mb-8 border-l-4 border-green-500 pl-4">Achievements</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					<!-- Ach 1 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-t-green-500">
+						<div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+							<i class="fas fa-trophy"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">The Winner of 2025 Advance level UNESCO UNITWIN Data Science Camp</h4>
+						<p class="text-gray-500 text-sm">Cambodia, Feb 2025</p>
+					</div>
+					<!-- Ach 2 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-t-green-500">
+						<div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+							<i class="fas fa-check-circle"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">Completed a Training on Digital Trade between China and Cambodia</h4>
+						<p class="text-gray-500 text-sm">Chongqing College, China, Sep 2023</p>
+					</div>
+					<!-- Ach 3 -->
+					<div class="group p-6 bg-white rounded-xl shadow-md border border-gray-100 hover:shadow-xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-t-green-500">
+						<div class="w-12 h-12 bg-green-50 text-green-600 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
+							<i class="fas fa-trophy"></i>
+						</div>
+						<h4 class="text-lg font-bold text-dark mb-2">The Winner Top 2 in Green Debate Competition</h4>
+						<p class="text-gray-500 text-sm">Battambang, 2022</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<!-- Include all js compiled plugins (below), or include individual files as needed -->
+	<!--Portfolio Section-->
+	<section id="portfolio" class="py-24 bg-gray-50">
+		<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="text-center mb-16">
+				<h2 class="text-3xl md:text-4xl font-bold text-dark">Portfolio</h2>
+				<div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+			</div>
 
-	<script src="assets/js/jquery.js"></script>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<!-- Project 1 -->
+				<div class="group relative rounded-xl overflow-hidden shadow-lg bg-white">
+					<div class="aspect-w-16 aspect-h-9 overflow-hidden">
+						<img src="assets/images/portfolio/Doctor_1.png" alt="Dr Semmelweis Analysis" class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110">
+					</div>
+					<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+						<h4 class="text-white text-xl font-bold mb-2">Dr. Semmelweis Analysis</h4>
+						<p class="text-white/80 mb-6">Analyze how handwashing helps prevent maternal deaths</p>
+						<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Dr%20Semmelweis%20Analysis/Dr_Semmelweis_Handwashing_Discovery.ipynb" target="_blank" class="inline-block px-6 py-2 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-colors">
+							View Project
+						</a>
+					</div>
+				</div>
 
-	<!--modernizr.min.js-->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+				<!-- Project 2 -->
+				<div class="group relative rounded-xl overflow-hidden shadow-lg bg-white">
+					<div class="aspect-w-16 aspect-h-9 overflow-hidden">
+						<img src="assets/images/portfolio/boston_1.jpg" alt="Boston House Price" class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110">
+					</div>
+					<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+						<h4 class="text-white text-xl font-bold mb-2">Boston House Price Prediction</h4>
+						<p class="text-white/80 mb-6">Creating a model to predict house prices in Boston</p>
+						<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Multivariable%20and%20Linear%20Regression/boston_house_price_prediction.ipynb" target="_blank" class="inline-block px-6 py-2 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-colors">
+							View Project
+						</a>
+					</div>
+				</div>
 
-	<!--bootstrap.min.js-->
-	<script src="assets/js/bootstrap.min.js"></script>
+				<!-- Project 3 -->
+				<div class="group relative rounded-xl overflow-hidden shadow-lg bg-white">
+					<div class="aspect-w-16 aspect-h-9 overflow-hidden">
+						<img src="assets/images/portfolio/nobel_1.jpg" alt="Nobel Prize Analysis" class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110">
+					</div>
+					<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+						<h4 class="text-white text-xl font-bold mb-2">Nobel Prize Analysis</h4>
+						<p class="text-white/80 mb-6">Explore the history of Nobel Prize</p>
+						<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Nobel%20Prize%20Analysis/Nobel_Prize_Analysis.ipynb" target="_blank" class="inline-block px-6 py-2 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-colors">
+							View Project
+						</a>
+					</div>
+				</div>
 
-	<!-- bootsnav js -->
-	<script src="assets/js/bootsnav.js"></script>
+				<!-- Project 4 -->
+				<div class="group relative rounded-xl overflow-hidden shadow-lg bg-white">
+					<div class="aspect-w-16 aspect-h-9 overflow-hidden">
+						<img src="assets/images/portfolio/movie.jpg" alt="Movie Budget Analysis" class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110">
+					</div>
+					<div class="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center p-6">
+						<h4 class="text-white text-xl font-bold mb-2">Movie Budget Analysis</h4>
+						<p class="text-white/80 mb-6">Discover the relationship between movie budget and revenue</p>
+						<a href="https://github.com/Toya-33/Data-Project-Python/blob/main/Seaborn%20Linear%20Regression/movie_budget_analysis.ipynb" target="_blank" class="inline-block px-6 py-2 bg-white text-primary font-semibold rounded-full hover:bg-gray-100 transition-colors">
+							View Project
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<!-- jquery.sticky.js -->
-	<script src="assets/js/jquery.sticky.js"></script>
+	<!--Contact Section-->
+	<section id="contact" class="py-24 bg-white">
+		<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="bg-gray-900 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+				<!-- Decorative circles -->
+				<div class="absolute top-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+				<div class="absolute bottom-0 right-0 w-64 h-64 bg-blue-400/20 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
-	<!-- for progress bar start-->
+				<div class="relative z-10">
+					<h2 class="text-3xl md:text-4xl font-bold mb-8">Contact Me</h2>
+					
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+						<div class="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+							<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+								<i class="fas fa-phone-alt"></i>
+							</div>
+							<p class="text-lg font-medium">855-85304019 <br> 855-95633963</p>
+						</div>
+						<div class="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+							<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+								<i class="fas fa-envelope"></i>
+							</div>
+							<p class="text-lg font-medium">hengkongkeaoudong@gmail.com</p>
+						</div>
+						<div class="p-6 bg-white/5 rounded-xl backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+							<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mx-auto mb-4 text-xl">
+								<i class="fas fa-globe"></i>
+							</div>
+							<p class="text-lg font-medium">toya-33.github.io/portfolio</p>
+						</div>
+					</div>
 
-	<!-- progressbar js -->
-	<script src="assets/js/progressbar.js"></script>
+					<div class="flex justify-center space-x-6">
+						<a href="https://web.facebook.com/viseth.iu.3" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white">
+							<i class="fab fa-facebook-f"></i>
+						</a>
+						<a href="https://twitter.com/T0YA_33" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white">
+							<i class="fab fa-twitter"></i>
+						</a>
+						<a href="https://www.linkedin.com/in/kongkea-oudong-heng-572790267/" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white">
+							<i class="fab fa-linkedin-in"></i>
+						</a>
+						<a href="https://github.com/Toya-33" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors text-white">
+							<i class="fab fa-github"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<!-- appear js -->
-	<script src="assets/js/jquery.appear.js"></script>
+	<!--Footer-->
+	<footer class="py-8 bg-white border-t border-gray-100">
+		<div class="container mx-auto px-4 text-center">
+			<p class="text-gray-500">
+				&copy; 2025 copyright <span class="text-primary font-bold">hengkongkeaoudong</span>. All rights reserved.
+			</p>
+		</div>
 
-	<!-- for progress bar end -->
+		<!-- Scroll to Top Button -->
+		<button id="scrollToTopBtn" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-blue-700 focus:outline-none z-50">
+			<i class="fas fa-angle-up"></i>
+		</button>
+	</footer>
 
-	<!--owl.carousel.js-->
-	<script src="assets/js/owl.carousel.min.js"></script>
+	<!-- Scripts -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script>
+		// Mobile Menu Toggle
+		const btn = document.getElementById('mobile-menu-btn');
+		const menu = document.getElementById('mobile-menu');
+
+		btn.addEventListener('click', () => {
+			menu.classList.toggle('hidden');
+		});
+
+		// Smooth Scroll & Active Link Highlighting
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+				menu.classList.add('hidden'); // Close mobile menu on click
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+	</script>
 
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
-
-	<!--Custom JS-->
-	<script src="assets/js/custom.js"></script>
 
 </body>
 
